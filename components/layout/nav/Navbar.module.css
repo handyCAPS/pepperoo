@@ -1,0 +1,21 @@
+
+.navbar {
+	background-color: var(--c-bg-dark);
+	color: var(--c-dark-contrast);
+	list-style: none;
+	margin: 0;
+	padding: 0;
+	display: flex;
+}
+
+.navbarItem a {
+	display: block;
+	text-align: center;
+	padding: 1em 1.2em;
+	transition: background-color 0.23s;
+}
+
+.navbarItem a:hover, .navbarItem.active a {
+	background-color: var(--c-dark-contrast);
+	color: var(--c-bg-dark);
+}

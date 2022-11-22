@@ -1,3 +1,13 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
 html,
 body {
   padding: 0;
@@ -7,12 +17,17 @@ body {
 }
 
 a {
-  color: inherit;
+  color: var(--c-link);
   text-decoration: none;
+	transition: color 0.23s;
 }
 
-* {
-  box-sizing: border-box;
+a:hover {
+	color: var(--c-link-hover);
+}
+
+h1, h2, h3, h4, h5, h6 {
+	margin: 0 0 0.75em;
 }
 
 @media (prefers-color-scheme: dark) {

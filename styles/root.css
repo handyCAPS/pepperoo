@@ -1,0 +1,13 @@
+:root {
+  --c-green: #52796f;
+  --c-green-light-1: #84a98c;
+  --c-green-light-2: #cad2c5;
+  --c-green-dark-1: #354f52;
+  --c-green--dark-2: #2f3e46;
+
+	--c-link: var(--c-green-light-1);
+	--c-link-hover: var(--c-green-dark-1);
+
+	--c-bg-dark: #000;
+	--c-dark-contrast: #FFF;
+}
