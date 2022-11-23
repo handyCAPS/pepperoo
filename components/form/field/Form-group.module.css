@@ -16,6 +16,8 @@
 .formGroup textarea {
 	border: 1px solid var(--c-contrast-border-light);
 	margin-bottom: 0.618em;
+	padding: 0.3em;
+	font-size: 1.1em;
 	transition: box-shadow 0.23s;
 }
 
@@ -39,4 +41,6 @@
 .formGroup textarea:focus ~ label {
 	margin-bottom: 0.3em;
 	padding-left: 0.618em;
+	color: var(--c-brand-main);
+	font-weight: bold;
 }

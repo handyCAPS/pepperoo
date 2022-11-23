@@ -4,7 +4,9 @@ import { NextPage } from "next";
 import { FormItem } from "../interfaces/formvalues.interface";
 import FormGroup from "./form-group";
 
-export interface TextInputProps extends FormItem<'text', string> {};
+export interface TextInputProps extends FormItem<'text', string> {
+	name: string;
+};
 
 const TextInput: NextPage<TextInputProps> = (props) => {
 	let label = props.label;

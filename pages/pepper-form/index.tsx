@@ -11,8 +11,9 @@ import {
 	FormValueType,
 	InputType,
 } from "../../components/form/interfaces/formvalues.interface";
+import PepperFormValues, { PepperFormFields } from "./pepper-form-values";
 
-const pepperFormValues: FormItem<InputType, FormValueType>[] = [
+const pepperFormValues2: FormItem<InputType, FormValueType>[] = [
 	{
 		type: "text",
 		name: "Number",
@@ -51,14 +52,15 @@ const PepperForm: NextPage = () => {
 	return (
 		<div className={classes.pepperForm}>
 			<FormBody submitHandler={handleSubmit}>
-				{pepperFormValues.map((formItem, index) => {
+				{Object.keys(PepperFormValues).map((formKey, index) => {
+					const formItem = {
+						...PepperFormValues[formKey as PepperFormFields],
+						name: formKey,
+					};
 					switch (formItem.type) {
-						case "text": {
-							const textInputProps = {
-								...formItem,
-							} as TextInputProps;
-							return <TextInput {...textInputProps} key={index}></TextInput>;
-						}
+						case "text":
+							const textItem = { ...formItem } as TextInputProps;
+							return <TextInput {...textItem} key={index}></TextInput> ;
 					}
 				})}
 			</FormBody>

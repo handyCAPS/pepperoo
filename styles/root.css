@@ -5,10 +5,13 @@
   --c-green-dark-1: #354f52;
   --c-green--dark-2: #2f3e46;
 
+	--c-brand-main: var(--c-green);
+
 	--c-link: var(--c-green-light-1);
 	--c-link-hover: var(--c-green-dark-1);
 
 	--c-bg-dark: #000;
+	--c-bg-slight: #F8F8F8;
 	--c-dark-contrast: #FFF;
 
 	--c-contrast-border: #A2A2A2;
