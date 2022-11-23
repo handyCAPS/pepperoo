@@ -51,7 +51,7 @@ const PepperForm: NextPage = () => {
 	const handleSubmit = (event: FormEvent) => {};
 	return (
 		<div className={classes.pepperForm}>
-			<FormBody submitHandler={handleSubmit}>
+			<FormBody submitHandler={handleSubmit} formTitle="Add Pepper">
 				{Object.keys(PepperFormValues).map((formKey, index) => {
 					const formItem = {
 						...PepperFormValues[formKey as PepperFormFields],
