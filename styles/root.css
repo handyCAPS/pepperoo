@@ -10,4 +10,8 @@
 
 	--c-bg-dark: #000;
 	--c-dark-contrast: #FFF;
+
+	--c-contrast-border: #A2A2A2;
+	--c-contrast-border-light: #c2c2c2;
+	--c-contrast-border-dark: #525252;
 }

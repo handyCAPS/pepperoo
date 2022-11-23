@@ -1,0 +1,42 @@
+.formGroup {
+	display: flex;
+	flex-wrap: wrap-reverse;
+}
+
+.formGroup label,
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+	display: block;
+	width: 100%;
+}
+
+.formGroup input,
+.formGroup select,
+.formGroup textarea {
+	border: 1px solid var(--c-contrast-border-light);
+	margin-bottom: 0.618em;
+	transition: box-shadow 0.23s;
+}
+
+.formGroup input:focus,
+.formGroup select:focus,
+.formGroup textarea:focus {
+	outline: none;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.17), 0 0px 6px rgba(0, 0, 0, 0.07);
+}
+
+.formGroup input ~ label,
+.formGroup select ~ label,
+.formGroup textarea ~ label {
+	margin-bottom: 0.1em;
+	padding-left: 0;
+	transition: 0.3s;
+}
+
+.formGroup input:focus ~ label,
+.formGroup select:focus ~ label,
+.formGroup textarea:focus ~ label {
+	margin-bottom: 0.3em;
+	padding-left: 0.618em;
+}

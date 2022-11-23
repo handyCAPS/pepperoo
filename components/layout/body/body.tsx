@@ -2,6 +2,8 @@ import classes from "./Body.module.css";
 
 import NavBar, { NavBarItem } from "../nav/navbar";
 import PageTitle from "./page-title";
+import { NextPage } from "next";
+import { ReactNode } from "react";
 
 const pageItems: NavBarItem[] = [
 	{
@@ -9,12 +11,16 @@ const pageItems: NavBarItem[] = [
 		link: "/",
 	},
 	{
-		label: "pepper-list",
+		label: "All peppers",
 		link: "/pepper-list",
+	},
+	{
+		label: "Add pepper",
+		link: "/pepper-form",
 	},
 ];
 
-export default function PepperBody(props: any) {
+const PepperBody: NextPage<{ children: ReactNode }> = (props) => {
 	return (
 		<div className={classes.outer}>
 			<NavBar items={pageItems}></NavBar>
@@ -22,4 +28,6 @@ export default function PepperBody(props: any) {
 			<div className={classes.inner}>{props.children}</div>
 		</div>
 	);
-}
+};
+
+export default PepperBody;
