@@ -1,6 +1,12 @@
 .formGroup {
 	display: flex;
 	flex-wrap: wrap-reverse;
+	margin-bottom: 0.23em;
+	transition: margin 0.2s;
+}
+
+.formGroup:focus-within {
+	margin-bottom: 0;
 }
 
 .formGroup label,

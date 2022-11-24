@@ -3,16 +3,21 @@
 	--c-green-light-1: #84a98c;
 	--c-green-light-2: #cad2c5;
 	--c-green-dark-1: #354f52;
-	--c-green--dark-2: #2f3e46;
+	--c-green-dark-2: #2f3e46;
 
 	--c-brand-main: var(--c-green);
+	--c-brand-main-dark-1: var(--c-green-dark-1);
+	--c-brand-main-dark-2: var(--c-green-dark-2);
+	--c-brand-main-light-1: var(--c-green-light-1);
+	--c-brand-main-light-2: var(--c-green-light-2);
 	--c-brand-main-contrast: #fff;
 
 	--c-link: var(--c-green-light-1);
 	--c-link-hover: var(--c-green-dark-1);
 
 	--c-bg-dark: #000;
-	--c-bg-slight: #f8f8f8;
+	--c-bg-lightest: #FAFAFA;
+	--c-bg-slight: #DFE0E2;
 	--c-dark-contrast: #fff;
 
 	--c-contrast-border: #a2a2a2;
@@ -21,4 +26,5 @@
 
 	--c-button: var(--c-brand-main);
 	--c-button-contrast: var(--c-brand-main-contrast);
+	--c-button-hover: var(--c-brand-main-dark-1);
 }

@@ -1,5 +1,6 @@
 .outer {
-
+	background-color: var(--c-bg-lightest);
+	min-height: 100vh;
 }
 
 .inner {

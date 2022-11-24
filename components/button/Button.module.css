@@ -1,6 +1,18 @@
 .button {
+	font-size: 1.05em;
 	border: none;
 	background-color: var(--c-button);
 	color: var(--c-button-contrast);
-	padding: 0.5em 0.75em;
+	padding: 0.75em 1.25em;
+	cursor: pointer;
+	transition: 0.23s;
+}
+
+.button:hover, .button:focus {
+	background-color: var(--c-button-hover);
+}
+
+.button:focus {
+	outline: 1px dotted var(--c-button-hover);
+	outline-offset: 4px;
 }

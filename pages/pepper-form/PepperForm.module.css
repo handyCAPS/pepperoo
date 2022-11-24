@@ -2,3 +2,10 @@
 	max-width: 36em;
 	margin: 0 auto;
 }
+
+.formFooter {
+	display: flex;
+	align-items: center;
+	justify-content: flex-end;
+	padding-top: 1em;
+}
