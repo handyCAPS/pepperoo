@@ -1,20 +1,24 @@
 :root {
-  --c-green: #52796f;
-  --c-green-light-1: #84a98c;
-  --c-green-light-2: #cad2c5;
-  --c-green-dark-1: #354f52;
-  --c-green--dark-2: #2f3e46;
+	--c-green: #52796f;
+	--c-green-light-1: #84a98c;
+	--c-green-light-2: #cad2c5;
+	--c-green-dark-1: #354f52;
+	--c-green--dark-2: #2f3e46;
 
 	--c-brand-main: var(--c-green);
+	--c-brand-main-contrast: #fff;
 
 	--c-link: var(--c-green-light-1);
 	--c-link-hover: var(--c-green-dark-1);
 
 	--c-bg-dark: #000;
-	--c-bg-slight: #F8F8F8;
-	--c-dark-contrast: #FFF;
+	--c-bg-slight: #f8f8f8;
+	--c-dark-contrast: #fff;
 
-	--c-contrast-border: #A2A2A2;
+	--c-contrast-border: #a2a2a2;
 	--c-contrast-border-light: #c2c2c2;
 	--c-contrast-border-dark: #525252;
+
+	--c-button: var(--c-brand-main);
+	--c-button-contrast: var(--c-brand-main-contrast);
 }

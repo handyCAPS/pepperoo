@@ -1,0 +1,6 @@
+.button {
+	border: none;
+	background-color: var(--c-button);
+	color: var(--c-button-contrast);
+	padding: 0.5em 0.75em;
+}

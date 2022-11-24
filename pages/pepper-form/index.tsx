@@ -1,7 +1,7 @@
 import classes from "./PepperForm.module.css";
 
 import { NextPage } from "next";
-import { FormEvent } from "react";
+import React, { FormEvent } from "react";
 import FormBody from "../../components/form/field/form-body";
 import TextInput, {
 	TextInputProps,
@@ -12,6 +12,7 @@ import {
 	InputType,
 } from "../../components/form/interfaces/formvalues.interface";
 import PepperFormValues, { PepperFormFields } from "./pepper-form-values";
+import Button from "../../components/button";
 
 const pepperFormValues2: FormItem<InputType, FormValueType>[] = [
 	{
@@ -48,7 +49,11 @@ const pepperFormValues2: FormItem<InputType, FormValueType>[] = [
 	} as FormItem<"textarea">,
 ];
 const PepperForm: NextPage = () => {
-	const handleSubmit = (event: FormEvent) => {};
+	const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
+		event.preventDefault();
+		console.log('WE have a submit!');
+
+	};
 	return (
 		<div className={classes.pepperForm}>
 			<FormBody submitHandler={handleSubmit} formTitle="Add Pepper">
@@ -63,6 +68,7 @@ const PepperForm: NextPage = () => {
 							return <TextInput {...textItem} key={index}></TextInput> ;
 					}
 				})}
+				<Button type="submit">Submit</Button>
 			</FormBody>
 		</div>
 	);
