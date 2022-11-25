@@ -1,13 +1,16 @@
 import classes from "./Form-body.module.css";
 
-import { NextPage } from "next";
 import React, { ReactNode } from "react";
 
-const FormBody: NextPage<{
-	children: ReactNode;
+export interface FormProps<T extends HTMLFormElement = HTMLFormElement> {
+	children?: ReactNode;
 	formTitle?: string;
-	submitHandler: (event: React.FormEvent<HTMLFormElement>) => void;
-}> = (props) => {
+	submitHandler: (event: React.FormEvent<T>) => void;
+}
+
+const FormBody = <T extends HTMLFormElement = HTMLFormElement>(
+	props: FormProps<T>
+) => {
 	return (
 		<form onSubmit={props.submitHandler} className={classes.formBody}>
 			{props.formTitle && (

@@ -7,7 +7,7 @@ const Home: NextPage = () => {
 	return (
 		<Fragment>
 			<Head>
-				<title>Pepperoo</title>
+				<title>Pepper Tracker</title>
 			</Head>
 			<PepperList></PepperList>
 		</Fragment>

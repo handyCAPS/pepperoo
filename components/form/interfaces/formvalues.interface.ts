@@ -33,3 +33,12 @@ export type FormValues<
 > = {
 	[key in K]: FormItem<T, V>;
 };
+
+/**
+ * Use this to create custom form collections
+ */
+export interface CustomFormElements<
+	T extends HTMLFormControlsCollection = HTMLFormControlsCollection
+> extends HTMLFormElement {
+	readonly elements: T;
+}
