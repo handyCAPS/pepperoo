@@ -1,4 +1,4 @@
-import classes from './CheckboxInput.module.css';
+import classes from './Checkbox-input.module.css';
 
 import { NextPage } from "next";
 import { useState } from "react";

@@ -9,7 +9,7 @@ export interface Pepper extends PepperBase {
 	name: string;
 	color: string;
 	cross?: boolean;
-	heat: string;
+	heatLevel: string;
 	fNumber?: number;
 	yearsGrowing?: number;
 	currentlyGrowing?: number;
