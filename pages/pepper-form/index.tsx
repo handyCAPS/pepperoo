@@ -11,6 +11,9 @@ import PepperFormValues, {
 	PepperFormFields,
 } from "./pepper-form-values";
 import Button from "../../components/button";
+import CheckboxInput, {
+	CheckboxInputProps,
+} from "../../components/form/field/checkbox-input";
 
 const handleSubmit = (event: React.FormEvent<PepperFormElement>) => {
 	event.preventDefault();
@@ -45,6 +48,9 @@ const PepperForm: NextPage = () => {
 						case "text":
 							const textItem = { ...formItem } as TextInputProps;
 							return <TextInput {...textItem} key={index}></TextInput>;
+						case "checkbox":
+							const checkboxItem = { ...formItem } as CheckboxInputProps;
+							return <CheckboxInput {...checkboxItem} key={index} />;
 					}
 				})}
 				<footer className={classes.formFooter}>

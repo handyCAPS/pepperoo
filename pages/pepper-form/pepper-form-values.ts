@@ -47,9 +47,9 @@ const PepperFormValues: FormValues<PepperFormFields, InputType, FormValueType> =
 			label: "Color",
 		},
 		cross: {
-			type: "text",
+			type: "checkbox",
 			label: "Cross",
-		},
+		} as FormItem<"checkbox">,
 		fNumber: {
 			type: "text",
 			label: "F Number",

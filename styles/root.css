@@ -15,9 +15,11 @@
 	--c-link: var(--c-green-light-1);
 	--c-link-hover: var(--c-green-dark-1);
 
-	--c-bg-dark: #000;
+	--c-bg-dark: #222;
 	--c-bg-lightest: #FAFAFA;
 	--c-bg-slight: #DFE0E2;
+	--c-bg-soft: #F4F5F6;
+	--c-bg-soft-contrast: #222;
 	--c-dark-contrast: #fff;
 
 	--c-contrast-border: #a2a2a2;
@@ -27,4 +29,6 @@
 	--c-button: var(--c-brand-main);
 	--c-button-contrast: var(--c-brand-main-contrast);
 	--c-button-hover: var(--c-brand-main-dark-1);
+
+	--c-text-soft: #888888;
 }

@@ -1,8 +1,8 @@
 .formBody {
 	display: block;
-	border: 1px solid var(--c-contrast-border-light);
-	padding: 1em;
-	background: var(--c-bg-slight);
+	border-radius: 1.618em;
+	padding: 3em;
+	background: var(--c-dark-contrast);
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.27);
 }
 

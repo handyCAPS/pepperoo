@@ -1,5 +1,5 @@
 .outer {
-	background-color: var(--c-bg-lightest);
+	background-color: var(--c-bg-soft);
 	min-height: 100vh;
 }
 

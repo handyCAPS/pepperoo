@@ -1,7 +1,11 @@
 import classes from './Form-group.module.css';
 
 import { NextPage } from "next";
-import { ReactNode } from "react";
+import { PageWithChildren } from '../../../interfaces/page-with-children.interface';
+
+export interface FormGroupProps extends PageWithChildren {
+	classNames?: string[];
+}
 
 /**
  * Nice display of formgroup
@@ -9,8 +13,10 @@ import { ReactNode } from "react";
  * @param props React children
  * @returns React node
  */
-const FormGroup: NextPage<{children: ReactNode}> = (props) => {
-	return (<div className={classes.formGroup}>{props.children}</div>);
+const FormGroup: NextPage<FormGroupProps> = (props) => {
+	const propNames = props.classNames || [];
+	const classNameArray = [...propNames, classes.formGroup];
+	return (<div className={classNameArray.join(' ')}>{props.children}</div>);
 }
 
 export default FormGroup;

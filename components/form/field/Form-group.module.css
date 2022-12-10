@@ -1,12 +1,18 @@
 .formGroup {
 	display: flex;
 	flex-wrap: wrap-reverse;
-	margin-bottom: 0.23em;
-	transition: margin 0.2s;
 }
 
-.formGroup:focus-within {
-	margin-bottom: 0;
+.formGroup:not(:last-of-type) {
+	margin-bottom: 1.5em;
+}
+
+.formGroup label {
+	font-weight: 600;
+	color: var(--c-text-soft);
+	margin-bottom: 0.3em;
+	padding-left: 0;
+	transition: 0.3s;
 }
 
 .formGroup label,
@@ -20,26 +26,26 @@
 .formGroup input,
 .formGroup select,
 .formGroup textarea {
-	border: 1px solid var(--c-contrast-border-light);
-	margin-bottom: 0.618em;
-	padding: 0.3em;
-	font-size: 1.1em;
-	transition: box-shadow 0.23s;
+	font-size: 1.12em;
+	/* border: 1px solid var(--c-contrast-border-light); */
+	border: none;
+	border-radius: 10px;
+	padding: 0.63em;
+	transition: 0.23s;
+}
+
+.formGroup input,
+.formGroup textarea {
+	background-color: var(--c-bg-soft);
 }
 
 .formGroup input:focus,
 .formGroup select:focus,
 .formGroup textarea:focus {
 	outline: none;
-	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.17), 0 0px 6px rgba(0, 0, 0, 0.07);
-}
-
-.formGroup input ~ label,
-.formGroup select ~ label,
-.formGroup textarea ~ label {
-	margin-bottom: 0.1em;
-	padding-left: 0;
-	transition: 0.3s;
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.17), 0 4px 4px rgba(0, 0, 0, 0.07);
+	/* border-radius: 0; */
+	background-color: var(--c-dark-contrast);
 }
 
 .formGroup input:focus ~ label,
@@ -48,5 +54,5 @@
 	margin-bottom: 0.3em;
 	padding-left: 0.618em;
 	color: var(--c-brand-main);
-	font-weight: bold;
+	font-weight: 700;
 }
