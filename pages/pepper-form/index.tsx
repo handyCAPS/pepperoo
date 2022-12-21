@@ -15,10 +15,13 @@ import CheckboxInput, {
 	CheckboxInputProps,
 } from "../../components/form/field/checkbox-input";
 import { Pepper } from "../../interfaces/pepper.interface";
+import SelectInput, {
+	SelectInputProps,
+} from "../../components/form/field/select-input";
 
 export interface PepperFormProps {
 	pepper?: Pepper;
-};
+}
 
 const PepperForm: NextPage<PepperFormProps> = (props) => {
 	const handleSubmit = (event: React.FormEvent<PepperFormElement>) => {
@@ -71,6 +74,11 @@ const PepperForm: NextPage<PepperFormProps> = (props) => {
 						case "checkbox":
 							const checkboxItem = { ...formItem } as CheckboxInputProps;
 							return <CheckboxInput {...checkboxItem} key={index} />;
+						case "select":
+							const selectItem = {
+								...formItem,
+							} as SelectInputProps;
+							return <SelectInput {...selectItem} key={index}></SelectInput>;
 					}
 				})}
 				<footer className={classes.formFooter}>

@@ -4,6 +4,7 @@ import {
 	FormValues,
 	FormValueType,
 	CustomFormElements,
+	FormOption,
 } from "../../components/form/interfaces/formvalues.interface";
 
 export type PepperFormFields =
@@ -36,6 +37,25 @@ interface PepperFormElements extends HTMLFormControlsCollection {
 export interface PepperFormElement
 	extends CustomFormElements<PepperFormElements> {}
 
+const heatLevels = [
+	"None (0 - 2500 su)",
+	"Mild (2500 - 30.000 su)",
+	"Medium (30.000 - 100.000 su)",
+	"Hot (100.000 - 400.000 su)",
+	"Super Hot (400.000+ su)",
+];
+
+const heatLevelOptions: FormOption<number>[] = heatLevels.map(
+	(level, index) => ({ label: level, value: index })
+);
+
+const fNumbers = ["Stable", "F1", "F2", "F3", "F4", "F5", "F6", "F7"];
+
+const fNumberOptions: FormOption<number>[] = fNumbers.map((num, index) => ({
+	label: num,
+	value: index,
+}));
+
 const PepperFormValues: FormValues<PepperFormFields, InputType, FormValueType> =
 	{
 		name: {
@@ -51,25 +71,29 @@ const PepperFormValues: FormValues<PepperFormFields, InputType, FormValueType> =
 			label: "Cross",
 		} as FormItem<"checkbox">,
 		fNumber: {
-			type: "text",
+			type: "select",
 			label: "F Number",
-		},
+			options: fNumberOptions,
+			value: 0,
+		} as FormItem<"select", number>,
 		heatLevel: {
-			type: "text",
+			type: "select",
 			label: "Heat level",
-		},
+			options: heatLevelOptions,
+			value: 3,
+		} as FormItem<"select", number>,
 		yearsGrowing: {
 			type: "text",
 			label: "Years growing",
+		},
+		currentlyGrowing: {
+			type: "text",
+			label: "Currently growing",
 		},
 		remarks: {
 			type: "textarea",
 			label: "Remarks",
 		} as FormItem<"textarea">,
-		currentlyGrowing: {
-			type: "text",
-			label: "Currently growing",
-		},
 	};
 
 export default PepperFormValues;

@@ -14,16 +14,16 @@ export interface FormValueBase<
 	pattern?: string;
 }
 
-export interface FormOption {
+export interface FormOption<T extends FormValueType = string> {
 	label: string;
-	value?: string;
+	value?: T;
 }
 
 export interface FormItem<
 	T extends InputType = "text",
-	V extends FormValueType = string
+	V extends FormValueType = string,
 > extends FormValueBase<T, V> {
-	options?: FormOption[];
+	options?: FormOption<V>[];
 }
 
 export type FormValues<
